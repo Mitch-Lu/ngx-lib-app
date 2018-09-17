@@ -23,12 +23,6 @@
       ],
       "ngx-auth-wso2/*": [
         "dist/ngx-auth-wso2/*"
-      ],
-      "text-lib": [
-        "dist/text-lib"
-      ],
-      "text-lib/*": [
-        "dist/text-lib/*"
       ]
     }
   }
