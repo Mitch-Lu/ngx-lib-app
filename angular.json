@@ -121,6 +121,86 @@
           }
         }
       }
+    },
+    "ngx-auth-wso2": {
+      "root": "projects/ngx-auth-wso2",
+      "sourceRoot": "projects/ngx-auth-wso2/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-auth-wso2/tsconfig.lib.json",
+            "project": "projects/ngx-auth-wso2/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/ngx-auth-wso2/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-auth-wso2/src/test.ts",
+            "tsConfig": "projects/ngx-auth-wso2/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-auth-wso2/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-auth-wso2/tsconfig.lib.json",
+              "projects/ngx-auth-wso2/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "text-lib": {
+      "root": "projects/text-lib",
+      "sourceRoot": "projects/text-lib/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/text-lib/tsconfig.lib.json",
+            "project": "projects/text-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/text-lib/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/text-lib/src/test.ts",
+            "tsConfig": "projects/text-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/text-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/text-lib/tsconfig.lib.json",
+              "projects/text-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-lib-app"
