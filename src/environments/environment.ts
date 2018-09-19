@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseUrl: 'https://10.238.20.190:8243',
+  token: '/token',
+  refresh: '/refresh',
+  scope: '',
+  clientSecret: 'V3pBZnMwd1lzTGZLbGh1S0t6SWhtZjNQQ1drYTpqT2ZjVmtxdFd5NTNJV1UwaGNzWmZUNmMzTUFh'
 };
 
 /*
